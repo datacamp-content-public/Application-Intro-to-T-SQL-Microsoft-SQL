@@ -1,4 +1,4 @@
-title: Course Title Here
+title: Application Intro to T SQL Microsoft SQL
 description: A description of the course.
 programming_language: sql
 from: 'postgresql-base-prod:22' # 'msft-sql-base-prod:40'
