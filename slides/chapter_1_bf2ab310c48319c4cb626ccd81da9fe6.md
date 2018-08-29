@@ -48,7 +48,7 @@ key: "7f8094cc4d"
 
 
 `@script`
-____
+So let's start by taking a look at what we mean by a database.
 
 
 ---
