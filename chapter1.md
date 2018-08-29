@@ -51,3 +51,15 @@ Do some data science.
 ```
 
 
+---
+
+## Intro to T-SQL / Microsoft SQL
+
+```yaml
+type: VideoExercise 
+xp: 50 
+key: 0851e37bc2   
+```
+
+`@projector_key`
+bf2ab310c48319c4cb626ccd81da9fe6
