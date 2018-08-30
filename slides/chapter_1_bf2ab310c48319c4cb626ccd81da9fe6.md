@@ -157,6 +157,8 @@ key: "4d357131b9"
 `@part1`
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/52c5b3f2a5c73d24d2415d290c23bf790a8a6547/01 Select 1.PNG)
 
+![](https://assets.datacamp.com/production/repositories/3466/datasets/772d0bec882685c9da030338c5cae5cacc6e30de/01 Select 1 output.PNG)
+
 
 `@part2`
 This query will return ALL rows of data from the 'Family' column of the **expenses** table
