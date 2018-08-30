@@ -147,7 +147,7 @@ Try to bear in mind that eventually, the data you work with may be scattered acr
 
 
 ---
-## Single column SELECT
+## Simple SELECT
 
 ```yaml
 type: "TwoColumns"
@@ -155,17 +155,15 @@ key: "4d357131b9"
 ```
 
 `@part1`
-`SELECT [Family] 
-  
-  FROM [expenses];`
+![](https://assets.datacamp.com/production/repositories/3466/datasets/52c5b3f2a5c73d24d2415d290c23bf790a8a6547/01 Select 1.PNG)
 
 
 `@part2`
-This query will return all data from the Family column of the Expenses table
+This query will return ALL rows of data from the 'Family' column of the **expenses** table
 
 
 `@script`
-
+Here is a very simple SELECT statement. This will return ALL the rows in the Family column, from the Expenses table. Depending on the size of the table, this could return a few hundred rows, or several million.
 
 
 ---
