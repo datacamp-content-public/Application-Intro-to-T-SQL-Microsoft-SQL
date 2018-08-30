@@ -143,6 +143,28 @@ Let's learn to SELECT data
 
 
 `@script`
+Try to bear in mind that eventually, the data you work with may be scattered across several tables. Therefore, always envisage that you are trying to find a subset of all the possible data in the database.
+
+
+---
+## Single column SELECT
+
+```yaml
+type: "TwoColumns"
+key: "4d357131b9"
+```
+
+`@part1`
+`SELECT [Family] 
+  
+  FROM [expenses];`
+
+
+`@part2`
+This query will return all data from the Family column of the Expenses table
+
+
+`@script`
 
 
 
