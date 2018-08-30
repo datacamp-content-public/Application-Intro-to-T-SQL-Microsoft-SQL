@@ -24,7 +24,45 @@ Before we go further, let's take a look at what we mean by a database, and how a
 
 
 ---
-## A Simple Database Overview
+## What is T-SQL?
+
+```yaml
+type: "FullSlide"
+key: "21935e79ac"
+```
+
+`@part1`
+- SQL
+
+ is the language used to interact with databases
+
+- Portability & Common Standards
+
+Most SQL is portable between different products. 
+
+- T-SQL
+ 
+Short for 'transact - SQL', is the Microsoft 'version' of SQL and is  tyically used when interacting with Microsoft SQL Server databases
+
+
+`@script`
+Welcome. 
+What is T_SQL and why would you want to learn it?
+Well, a lot of the world's data resides in databases. 
+SQL (can be pronounced ESS-QUE-ELL or SQL) is the primary way of interacting with this data. 
+
+A lot of SQL is common across various platforms - indeed there are defined standards to ensure portability of SQL code. 
+
+However,different products mean different features and functions are available.
+ 
+In this course, we'll cover T-SQL, or'Transact-SQL' 
+This is the Microsoft version of SQL, used in its SQL Server product.
+
+Now we know that T-SQL is a language for interacting with Microsoft databases,  let's take a look at how a database is structured.
+
+
+---
+## Overview : Database Structure
 
 ```yaml
 type: "TwoColumns"
@@ -36,17 +74,72 @@ key: "7f8094cc4d"
 
 
 `@part2`
-- A database has one or more tables
+- A SQL Server installation may have many databases
+
+- A database has one or more _tables_
 
 - Each table has a unique name
 
 - Most tables will link to at least one other table in the database via a common _field_
 
-**What do we mean by a field?**
+
+`@script`
+If you install MS SQL Server on your PC or laptop, then that represents one instance. 
+
+In a large organisation, there may be many instances. 
+
+Each instance can contain many databases, and, each database can contain many tables.
+ 
+Each table in a database has a unique name.  
+For example, there could be a customer table in two different databases, but there cannot be 2 customer tables in the same database.
+ 
+This helps ensure that data is always retrieved from the correct table.
+
+
+---
+## Tables
+
+```yaml
+type: "TwoColumns"
+key: "3f8ea25017"
+```
+
+`@part1`
+![](https://assets.datacamp.com/production/repositories/3466/datasets/6a7185129b4f4630129e6c28e43b95b465795243/spreadsheet-147749_640.png)
+
+
+`@part2`
+- Tables are commonly presented as rows and columns
+
+- A column represents a field
+
+- A row represents a record
+
+- There should be one column that acts as a unique identifier, or 'key' field
+
+- This field is then used to link to other columns, in other tables
+
+- Unlike a spreadsheet, the rows in a table are generally NOT in any particular order.
 
 
 `@script`
-So let's start by taking a look at what we mean by a database.
+
+
+
+---
+## Insert title here...
+
+```yaml
+type: "FullImageSlide"
+key: "06d01fbf2a"
+```
+
+`@part1`
+
+
+
+`@script`
+![](image-url)
 
 
 ---
