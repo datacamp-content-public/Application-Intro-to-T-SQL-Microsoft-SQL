@@ -20,9 +20,7 @@ title: Instructor
 In this section, we'll learn to use the SELECT statement. 
 This is the basic building block of most T-SQL queries.
 SELECT statements do exactly what they say - they specify the information we want to retrieve from the tables in our database.
-Before we go further, let's take a look at what we mean by a database, and how they are structured.
-
-Before we go further, it might help to have a look at
+Before we go further, let's take a look at what we mean by a database, and how a database is structured.
 
 
 ---
