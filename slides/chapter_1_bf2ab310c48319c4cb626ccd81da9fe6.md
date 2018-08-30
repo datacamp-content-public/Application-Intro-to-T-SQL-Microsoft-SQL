@@ -24,7 +24,7 @@ Before we go further, let's take a look at what we mean by a database, and how a
 
 
 ---
-## A (Very) Simple Database Overview
+## A Simple Database Overview
 
 ```yaml
 type: "TwoColumns"
