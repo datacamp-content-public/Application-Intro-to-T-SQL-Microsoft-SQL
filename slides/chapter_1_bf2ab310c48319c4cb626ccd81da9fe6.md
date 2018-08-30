@@ -127,19 +127,23 @@ key: "3f8ea25017"
 
 
 ---
-## Insert title here...
+## Think Sets, Not Rows
 
 ```yaml
-type: "FullImageSlide"
-key: "06d01fbf2a"
+type: "TwoRows"
+key: "8353295e36"
 ```
 
 `@part1`
+![](https://assets.datacamp.com/production/repositories/3466/datasets/73c487f1801a9db8393081bc190cd834ad4140dc/venn-diagram-41218_640.png)
 
+
+`@part2`
+Let's learn to SELECT data
 
 
 `@script`
-![](image-url)
+
 
 
 ---
