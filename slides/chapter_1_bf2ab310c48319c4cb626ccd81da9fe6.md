@@ -21,23 +21,27 @@ In this section, we'll learn to use the ORDER BY keywords, which will sort our d
 
 
 ---
-## Think Sets, Not Rows
+## Sets don't have a natural order
 
 ```yaml
-type: "TwoRows"
-key: "8353295e36"
+type: "TwoRowsWideBottom"
+key: "83a55eeb90"
 ```
 
 `@part1`
-![](https://assets.datacamp.com/production/repositories/3466/datasets/73c487f1801a9db8393081bc190cd834ad4140dc/venn-diagram-41218_640.png)
-
-
-`@part2`
-- Queries return sets, or subsets, of the overall data {{1}}
+- We think in terms of rows and columns, but queries return sets, or subsets, of the overall data {{1}}
 
 - Results may not always be returned in the same order (depending on how the data is entered and how the table is designed) {{2}}
 
 - If the order of our query results is important, we need to specify it using ORDER BY {{3}}
+
+
+`@part2`
+![](https://assets.datacamp.com/production/repositories/3466/datasets/5529b1afa3d94b2af37c088a6c1c796f82da8b09/database-schema-1895779_640.png)
+
+
+`@part3`
+![](https://assets.datacamp.com/production/repositories/3466/datasets/73c487f1801a9db8393081bc190cd834ad4140dc/venn-diagram-41218_640.png)
 
 
 `@script`
@@ -132,9 +136,11 @@ SELECT TOP (50) id, order_value
 
 
 `@script`
-On the left, records 8-11 have the same order value, but we also specify sorting by the id column, which acts as a tie breaker.
+On the left, records are first sorted by order value, then by ID. 
 
-On the right, records 8-11 have the same order value, but the id column is now sorted in descending order, so the results do not match those on the left
+Records 8-11 have the same order value, so its the id column, this acts as a tie breaker and determines the final order.
+
+On the right, records 8-11 have the same order value, but the id column is now sorted in descending order.
 
 
 ---
