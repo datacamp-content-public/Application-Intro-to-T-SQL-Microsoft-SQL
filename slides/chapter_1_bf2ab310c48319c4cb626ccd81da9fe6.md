@@ -24,7 +24,7 @@ Before we go further, let's take a look at what we mean by a database, and how a
 
 
 ---
-## What is T-SQL?
+## T-SQL
 
 ```yaml
 type: "FullSlide"
@@ -32,17 +32,15 @@ key: "21935e79ac"
 ```
 
 `@part1`
-- SQL
+- SQL : structured query language {{1}}
 
- is the language used to interact with databases  {{1}}
+- T-SQL : Transact-SQL {{2}}
 
-- Portability & Common Standards {{2}}
+- Microsoft's enhanced version of SQL. Used when interacting with SQL Server databases {{3}}
 
-Most SQL is portable between different products.  {{3}}
+-  SQL Server is widely used {{4}}
 
-- T-SQL  {{4}}
- 
-Short for 'transact - SQL', is the Microsoft 'version' of SQL and is  tyically used when interacting with Microsoft SQL Server databases  {{5}}
+- Portability : you will be able to transfer your knowledge to other types of SQL database {{5}}
 
 
 `@script`
