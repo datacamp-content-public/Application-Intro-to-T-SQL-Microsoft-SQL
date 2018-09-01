@@ -34,15 +34,15 @@ key: "21935e79ac"
 `@part1`
 - SQL
 
- is the language used to interact with databases
+ is the language used to interact with databases  {{1}}
 
-- Portability & Common Standards
+- Portability & Common Standards {{2}}
 
-Most SQL is portable between different products. 
+Most SQL is portable between different products.  {{3}}
 
-- T-SQL
+- T-SQL  {{4}}
  
-Short for 'transact - SQL', is the Microsoft 'version' of SQL and is  tyically used when interacting with Microsoft SQL Server databases
+Short for 'transact - SQL', is the Microsoft 'version' of SQL and is  tyically used when interacting with Microsoft SQL Server databases  {{5}}
 
 
 `@script`
