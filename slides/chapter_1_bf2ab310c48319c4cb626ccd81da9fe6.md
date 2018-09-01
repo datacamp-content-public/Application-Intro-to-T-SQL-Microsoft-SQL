@@ -37,7 +37,7 @@ key: "83a55eeb90"
 
 
 `@part2`
-![](https://assets.datacamp.com/production/repositories/3466/datasets/5529b1afa3d94b2af37c088a6c1c796f82da8b09/database-schema-1895779_640.png)
+![](https://assets.datacamp.com/production/repositories/3466/datasets/6a7185129b4f4630129e6c28e43b95b465795243/spreadsheet-147749_640.png)
 
 
 `@part3`
