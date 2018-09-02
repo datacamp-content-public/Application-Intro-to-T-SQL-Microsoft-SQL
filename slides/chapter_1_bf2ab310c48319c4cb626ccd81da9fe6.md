@@ -17,7 +17,7 @@ title: Instructor
 
 
 `@script`
-In this section, we'll learn to sort and filter our data using ORDER BY and WHERE clauses.
+Our SELECT statements  currently return all rows in our chosen columns. In this section, we'll learn how to filter these rows, and sort them, using the ORDER BY and WHERE clauses.
 
 
 ---
@@ -49,8 +49,9 @@ key: "83a55eeb90"
 
 
 `@script`
-Our data is stored in tables, which comprise of columns and rows, like a spreadsheet. 
-But ,depending on how the data is entered, and how the table is designed, we can't guarantee our data will always be returned in a desired order.
+Our data is stored in tables, which comprise of columns and rows.
+
+But,depending on how the data is entered, and how the table is designed, we can't guarantee our SELECT statements will always return data in a given order.
 
 If we have a desired order, we must specify it, using ORDER BY.
 
@@ -65,9 +66,9 @@ key: "4d357131b9"
 
 `@part1`
 ```SQL
-SELECT TOP (50) order_value
+SELECT TOP (10) customerid,amount
   FROM [DataDemo].[dbo].[Order]
-  ORDER BY order_value ; 
+  ORDER BY amount ; 
 ```
 
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/fd9f65402016dae0e05e88de25a5c0492b99f6d3/01 Order-by-output.PNG)
