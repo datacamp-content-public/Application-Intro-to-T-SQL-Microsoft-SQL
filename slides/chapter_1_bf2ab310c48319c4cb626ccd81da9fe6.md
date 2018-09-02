@@ -67,7 +67,7 @@ key: "4d357131b9"
 `@part1`
 ```SQL
 SELECT TOP (10) customer_id,amount
-  FROM [DataDemo].[dbo].[Order]
+  FROM [Order]
   ORDER BY amount ; 
 ```
 {{1}}
@@ -104,7 +104,7 @@ key: "3f8ea25017"
 `@part1`
 ```SQL
 SELECT TOP (10) customer_id,amount
-  FROM [DataDemo].[dbo].[Order]
+  FROM [Order]
   ORDER BY amount DESC;
 ```
 
@@ -131,10 +131,9 @@ key: "4c4bd7f7b7"
 `@part1`
 ```SQL
 SELECT TOP (10) customer_id,amount
-  FROM [DataDemo].[dbo].[Order]
+  FROM [Order]
   ORDER BY amount, customer_id;
 ```
-
 
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/8ca0fa5bf501073e0993c628cd36fda96ba12559/01 Order-by-output-multiple-ascending.PNG)
 
@@ -142,7 +141,7 @@ SELECT TOP (10) customer_id,amount
 `@part2`
 ```SQL
 SELECT TOP (10) customer_id,amount
-  FROM [DataDemo].[dbo].[Order]
+  FROM [Order]
   ORDER BY amount, customer_id DESC;
 ```
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/32e4741999b5c10db4267ccbf83d44eca7cb20e6/01 Order-by-output-multiple-desc.PNG)
