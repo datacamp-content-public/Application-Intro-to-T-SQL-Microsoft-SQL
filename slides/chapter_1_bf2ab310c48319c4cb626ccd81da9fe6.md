@@ -96,22 +96,6 @@ Finally, remember that we can order by a column, without it appearing in the SEL
 
 
 ---
-## Insert title here...
-
-```yaml
-type: "FullSlide"
-key: "8747d53411"
-```
-
-`@part1`
-
-
-
-`@script`
-
-
-
----
 ## ORDER BY - Descending Order
 
 ```yaml
@@ -202,6 +186,43 @@ ORDER BY product DESC;
 `@script`
 Ordering works with string fields as well. So here, we see product sorted from A-Z on the left, and, because we specify DESC in the right hand query, we see the product column ordered from Z-A. 
 As before, we can order multiple string columns, in any combination of ascending and descending order.
+
+
+---
+## WHERE clause operators 
+
+```yaml
+type: "FullSlide"
+key: "cb95ad24ba"
+```
+
+`@part1`
+```SQL
+
+SELECT * 
+FROM table 
+WHERE -- 
+-- WHERE col > 10 -- greater than 10
+
+-- WHERE col < 10 -- less than 10
+
+-- WHERE col >= 10 -- greater than or equal to 10
+
+-- WHERE col <= 20 -- less than or equal to 10
+
+-- WHERE col <> 10 -- NOT EQUAL to 10
+
+-- WHERE col !< 10 -- not less than
+
+-- WHERE col !> 10 -- not greater than 10
+
+-- WHERE stringCol = 'desired_string'
+
+```
+
+
+`@script`
+
 
 
 ---
