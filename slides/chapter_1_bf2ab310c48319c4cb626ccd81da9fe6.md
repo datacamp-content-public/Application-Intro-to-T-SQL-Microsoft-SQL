@@ -90,7 +90,25 @@ By default, when we use ORDER BY, the results are ordered lowest to highest
 
 The results show the 10 records with the lowest order amount.
 
-Note that ORDER BY appears below the FROM section of the query. If
+Note that ORDER BY appears below the FROM section of the query.
+
+Finally, remember that we can order by a column, without it appearing in the SELECT statement
+
+
+---
+## Insert title here...
+
+```yaml
+type: "FullSlide"
+key: "8747d53411"
+```
+
+`@part1`
+
+
+
+`@script`
+
 
 
 ---
@@ -182,7 +200,8 @@ ORDER BY product DESC;
 
 
 `@script`
-
+Ordering works with string fields as well. So here, we see product sorted from A-Z on the left, and, because we specify DESC in the right hand query, we see the product column ordered from Z-A. 
+As before, we can order multiple string columns, in any combination of ascending and descending order.
 
 
 ---
