@@ -71,7 +71,7 @@ SELECT TOP (10) customerid,amount
   ORDER BY amount ; 
 ```
 
-![](https://assets.datacamp.com/production/repositories/3466/datasets/fd9f65402016dae0e05e88de25a5c0492b99f6d3/01 Order-by-output.PNG)
+![](https://assets.datacamp.com/production/repositories/3466/datasets/612850ed851ccc16a41b59ce3dff7cc9dd5c5037/01 Order-by.PNG)
 
 
 `@part2`
