@@ -17,11 +17,11 @@ title: Instructor
 
 
 `@script`
-In this section, we'll learn to use the ORDER BY keywords, which will sort our data, and WHERE clauses, to return data that meet our criteria
+In this section, we'll learn to sort and filter our data using ORDER BY and WHERE clauses.
 
 
 ---
-## Sets don't have a natural order
+## ORDER! ORDER!
 
 ```yaml
 type: "TwoRowsWideBottom"
@@ -29,25 +29,30 @@ key: "83a55eeb90"
 ```
 
 `@part1`
-- We think in terms of rows and columns, but queries return sets, or subsets, of the overall data {{1}}
+- Tables have columns and rows {{1}}
 
-- Results may not always be returned in the same order (depending on how the data is entered and how the table is designed) {{2}}
+- Queries return _sets_, or _subsets_, of the overall data.{{2}}
 
-- If the order of our query results is important, we need to specify it using ORDER BY {{3}}
+- Sets  have NO inherent order. {{3}}
+
+- Query results may not always be returned in the same order  {{4}}
+
+- If the order of our query is _important_, we need to specify it using **ORDER BY** {{5}}
 
 
 `@part2`
-![](https://assets.datacamp.com/production/repositories/3466/datasets/6a7185129b4f4630129e6c28e43b95b465795243/spreadsheet-147749_640.png)
+![](https://assets.datacamp.com/production/repositories/3466/datasets/6a7185129b4f4630129e6c28e43b95b465795243/spreadsheet-147749_640.png) {{1}}
 
 
 `@part3`
-![](https://assets.datacamp.com/production/repositories/3466/datasets/73c487f1801a9db8393081bc190cd834ad4140dc/venn-diagram-41218_640.png)
+![](https://assets.datacamp.com/production/repositories/3466/datasets/73c487f1801a9db8393081bc190cd834ad4140dc/venn-diagram-41218_640.png) {{2}}
 
 
 `@script`
-SQL is set based, rather than row based.
-This means there is no inherent order in the results. 
-If having our data in a certain order is important, we need to specify this using the ORDER BY command
+Our data is stored in tables, which comprise of columns and rows, like a spreadsheet. 
+But ,depending on how the data is entered, and how the table is designed, we can't guarantee our data will always be returned in a desired order.
+
+If we have a desired order, we must specify it, using ORDER BY.
 
 
 ---
@@ -62,7 +67,7 @@ key: "4d357131b9"
 ```SQL
 SELECT TOP (50) order_value
   FROM [DataDemo].[dbo].[Order]
-  ORDER order_value ; 
+  ORDER BY order_value ; 
 ```
 
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/fd9f65402016dae0e05e88de25a5c0492b99f6d3/01 Order-by-output.PNG)
@@ -141,41 +146,6 @@ On the left, records are first sorted by order value, then by ID.
 Records 8-11 have the same order value, so its the id column, this acts as a tie breaker and determines the final order.
 
 On the right, records 8-11 have the same order value, but the id column is now sorted in descending order.
-
-
----
-## Overview : Database Structure
-
-```yaml
-type: "TwoColumns"
-key: "7f8094cc4d"
-```
-
-`@part1`
-![](https://assets.datacamp.com/production/repositories/3466/datasets/5529b1afa3d94b2af37c088a6c1c796f82da8b09/database-schema-1895779_640.png)
-
-
-`@part2`
-- A SQL Server installation may have many databases
-
-- A database has one or more _tables_
-
-- Each table has a unique name
-
-- Most tables will link to at least one other table in the database via a common _field_
-
-
-`@script`
-If you install MS SQL Server on your PC or laptop, then that represents one instance. 
-
-In a large organisation, there may be many instances. 
-
-Each instance can contain many databases, and, each database can contain many tables.
- 
-Each table in a database has a unique name.  
-For example, there could be a customer table in two different databases, but there cannot be 2 customer tables in the same database.
- 
-This helps ensure that data is always retrieved from the correct table.
 
 
 ---
