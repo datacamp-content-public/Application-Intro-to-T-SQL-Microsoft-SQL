@@ -230,6 +230,37 @@ As with order by - we can filter using a column that is not in the main SELECT s
 
 
 ---
+## What is NULL
+
+```yaml
+type: "TwoColumns"
+key: "6548e480d4"
+```
+
+`@part1`
+- NULLs occur in tables when there is no value for a particular field, for a particular record. 
+
+- check for NULL values using 
+IS NULL
+
+- filter out NULLs using 
+IS NOT NULL
+
+- replace NULLS using
+ISNULL(column_name, replacement_value)
+
+- Note the difference between IS NULL and ISNULL()
+
+
+`@part2`
+
+
+
+`@script`
+A missing value is not necessarily a zero value, and we may need to be aware of the 'missingness' of the record - NULLS help highlight gaps in our data
+
+
+---
 ## Final Slide
 
 ```yaml
