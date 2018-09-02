@@ -198,25 +198,22 @@ key: "cb95ad24ba"
 
 `@part1`
 ```SQL
-SELECT columnA, columnB
-FROM table 
-WHERE -- apply filter
+SELECT product, price
+FROM sales 
+WHERE price -- apply filter
 ORDER BY ; 
--- WHERE columnA > 10 -- greater than 10
 
--- WHERE columnA  < 10 -- less than 10
+-- WHERE price > 10 -- greater than 10
 
--- WHERE columnB  >= 10 -- greater than or equal to 10
+-- WHERE price  < 10 -- less than 10
 
--- WHERE columnB  <= 20 -- less than or equal to 10
+-- WHERE price >= 10 -- greater than or equal to 10
 
--- WHERE columnA  <> 10 -- NOT EQUAL to 10
+-- WHERE price  <= 20 -- less than or equal to 20
 
--- WHERE columnA  !< 10 -- not less than
+-- filtering string columns
 
--- WHERE columnA  !> 10 -- not greater than 10
-
--- WHERE stringCol = 'desired_string'
+-- WHERE product = 'peripherals'
 
 ```
 
@@ -230,7 +227,7 @@ As with order by - we can filter using a column that is not in the main SELECT s
 
 
 ---
-## NOT EQUAL TO
+## NON EQUALITY
 
 ```yaml
 type: "FullSlide"
