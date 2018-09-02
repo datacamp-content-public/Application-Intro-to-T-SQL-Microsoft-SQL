@@ -198,23 +198,23 @@ key: "cb95ad24ba"
 
 `@part1`
 ```SQL
-
-SELECT * 
+SELECT columnA, columnB
 FROM table 
-WHERE -- 
--- WHERE col > 10 -- greater than 10
+WHERE -- apply filter
+ORDER BY ; 
+-- WHERE columnA > 10 -- greater than 10
 
--- WHERE col < 10 -- less than 10
+-- WHERE columnA  < 10 -- less than 10
 
--- WHERE col >= 10 -- greater than or equal to 10
+-- WHERE columnB  >= 10 -- greater than or equal to 10
 
--- WHERE col <= 20 -- less than or equal to 10
+-- WHERE columnB  <= 20 -- less than or equal to 10
 
--- WHERE col <> 10 -- NOT EQUAL to 10
+-- WHERE columnA  <> 10 -- NOT EQUAL to 10
 
--- WHERE col !< 10 -- not less than
+-- WHERE columnA  !< 10 -- not less than
 
--- WHERE col !> 10 -- not greater than 10
+-- WHERE columnA  !> 10 -- not greater than 10
 
 -- WHERE stringCol = 'desired_string'
 
@@ -222,7 +222,11 @@ WHERE --
 
 
 `@script`
-
+It's good practice to use filters to ensure we only retrieve the data we need - why return millions of rows if we only need several thousand. 
+We use the WHERE clause, to filter our data so that we only return the rows that meet our desired criteria. 
+The most common types of WHERE clause are shown here. 
+Note that when we filter string columns, we use single quotes to specify the desired string value.
+As with order by - we can filter using a column that is not in the main SELECT statement
 
 
 ---
