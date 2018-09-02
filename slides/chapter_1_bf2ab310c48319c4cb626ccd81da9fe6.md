@@ -66,26 +66,31 @@ key: "4d357131b9"
 
 `@part1`
 ```SQL
-SELECT TOP (10) customerid,amount
+SELECT TOP (10) customer_id,amount
   FROM [DataDemo].[dbo].[Order]
   ORDER BY amount ; 
 ```
+{{1}}
 
-![](https://assets.datacamp.com/production/repositories/3466/datasets/612850ed851ccc16a41b59ce3dff7cc9dd5c5037/01 Order-by.PNG)
+![](https://assets.datacamp.com/production/repositories/3466/datasets/d85b48c99dc09aaec459f78124ee019f8463b313/01 Order-by-output.PNG) {{2}}
 
 
 `@part2`
-- use ORDER BY [column name] to order by the desired column 
+- use ORDER BY [column name] to order by the desired column {{1}}
 
-- By default,results are returned in ascending order (low - to high). 
+- By default,results are returned in ascending order (low - to high). {{2}}
 
-- Here we see the lowest order amounts from the **Order** table
+- When we use ORDER BY, it always appears as the last line of the query {{3}}
 
 
 `@script`
-In this query, we want to sort by the order_value column, so we specify that immediately after the ORDER BY syntax. 
+Here we select 2 columns  - customer ID and amount, and order by the the amount column. 
+ 
+By default, when we use ORDER BY, the results are ordered lowest to highest
 
-By default, the records are sorted from  the lowest to highest values.  These are the 50 lowest value records in the order table
+The results show the 10 records with the lowest order amount.
+
+Note that ORDER BY appears below the FROM section of the query. If
 
 
 ---
@@ -98,12 +103,12 @@ key: "3f8ea25017"
 
 `@part1`
 ```SQL
-SELECT TOP (50) order_value
+SELECT TOP (10) customer_id,amount
   FROM [DataDemo].[dbo].[Order]
-  ORDER BY order_value DESC;
+  ORDER BY amount DESC;
 ```
 
-![](https://assets.datacamp.com/production/repositories/3466/datasets/8eaad394514d8d9a7a1520088a6923099a71bcfc/01 Order-by-output-desc.PNG)
+![](https://assets.datacamp.com/production/repositories/3466/datasets/44235ad243e12559308a5945bbdf1745269f8d61/01 Order-by-output-desc.PNG)
 
 
 `@part2`
@@ -112,11 +117,11 @@ To return results in descending order, we use 'DESC' at the end of the ORDER BY 
 
 `@script`
 Here we use the same query, but adding DESC to the order by command, to specify results should by from highest to lowest
-This returns the 50 highest order value records from the order table.
+This returns the 10 highest order value records from the order table.
 
 
 ---
-## ORDER BY - Multiple columns
+## ORDER BY - Multiple columns, different directions
 
 ```yaml
 type: "TwoColumns"
@@ -125,28 +130,60 @@ key: "4c4bd7f7b7"
 
 `@part1`
 ```SQL
-SELECT TOP (50) id, order_value
+SELECT TOP (10) customer_id,amount
   FROM [DataDemo].[dbo].[Order]
-  ORDER BY order_value, id;
+  ORDER BY amount, customer_id;
 ```
-![](https://assets.datacamp.com/production/repositories/3466/datasets/29b5119ed825f1396cb1265083c72a10c986f74c/01 Order-by-output-multiple-ascending.PNG)
+
+
+![](https://assets.datacamp.com/production/repositories/3466/datasets/8ca0fa5bf501073e0993c628cd36fda96ba12559/01 Order-by-output-multiple-ascending.PNG)
 
 
 `@part2`
 ```SQL
-SELECT TOP (50) id, order_value
+SELECT TOP (10) customer_id,amount
   FROM [DataDemo].[dbo].[Order]
-  ORDER BY order_value ASC, id DESC;
+  ORDER BY amount, customer_id DESC;
 ```
-![](https://assets.datacamp.com/production/repositories/3466/datasets/643380ccf02550e6fbe8a1e18e91a9ae71fa9c67/01 Order-by-output-multiple-desc.PNG)
+![](https://assets.datacamp.com/production/repositories/3466/datasets/32e4741999b5c10db4267ccbf83d44eca7cb20e6/01 Order-by-output-multiple-desc.PNG)
 
 
 `@script`
 On the left, records are first sorted by order value, then by ID. 
 
-Records 8-11 have the same order value, so its the id column, this acts as a tie breaker and determines the final order.
+Records 8-10 have the same order value, so its the id column, this acts as a tie breaker and determines the final order.
 
-On the right, records 8-11 have the same order value, but the id column is now sorted in descending order.
+On the right, records 8-10 have the same order value, but the id column is now sorted in descending order.
+
+
+---
+## Ordering String columns
+
+```yaml
+type: "TwoColumns"
+key: "fc7be0d3cd"
+```
+
+`@part1`
+```SQL
+SELECT product_id, product
+FROM Product
+ORDER BY product;
+```
+![](https://assets.datacamp.com/production/repositories/3466/datasets/87d97067b4ce46c95a8b94be86a7c67b7a96c12e/01-string-ascending.PNG)
+
+
+`@part2`
+```SQL
+SELECT product_id, product
+FROM Product
+ORDER BY product DESC;
+```
+![](https://assets.datacamp.com/production/repositories/3466/datasets/1e3830266d5a038b70112a8aab7c6b03b198bd5c/01-string-descending.PNG)
+
+
+`@script`
+
 
 
 ---
