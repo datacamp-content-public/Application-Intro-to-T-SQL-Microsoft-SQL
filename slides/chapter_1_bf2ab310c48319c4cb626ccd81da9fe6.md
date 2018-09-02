@@ -230,6 +230,41 @@ As with order by - we can filter using a column that is not in the main SELECT s
 
 
 ---
+## NOT EQUAL TO
+
+```yaml
+type: "FullSlide"
+key: "c4379f92c3"
+```
+
+`@part1`
+```SQL
+
+SELECT product, price
+FROM sales 
+WHERE price  <> 10 -- NOT EQUAL to 10;
+
+
+SELECT product, price
+FROM sales  
+WHERE price  != 10 --  alternative NOT EQUAL notation;
+
+SELECT product, price
+FROM sales  
+WHERE price !< 10; -- not less than 10 (same as >= 10)
+
+SELECT product, price
+FROM sales  
+WHERE price !> 10; -- not greater than 10 (same as <= 10)
+
+```
+
+
+`@script`
+
+
+
+---
 ## What is NULL?
 
 ```yaml
