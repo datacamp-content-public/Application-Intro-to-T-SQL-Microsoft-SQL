@@ -230,7 +230,7 @@ As with order by - we can filter using a column that is not in the main SELECT s
 
 
 ---
-## What is NULL
+## What is NULL?
 
 ```yaml
 type: "TwoColumns"
@@ -240,7 +240,7 @@ key: "6548e480d4"
 `@part1`
 - NULLs occur in tables when there is no value for a particular field, for a particular record. 
 
-- check for NULL values using 
+- return NULL values using 
 IS NULL
 
 - filter out NULLs using 
@@ -253,7 +253,28 @@ ISNULL(column_name, replacement_value)
 
 
 `@part2`
+```SQL
 
+SELECT columnA, columnB
+FROM table 
+
+-- return NULLs
+
+WHERE amount IS NULL
+
+-- return non NULLS
+
+WHERE amount IS NOT NULL
+
+-- replace NULLs
+
+SELECT ISNULL(columnA,0)
+FROM table
+WHERE --other conditions
+ORDER BY column B DESC;
+
+
+```
 
 
 `@script`
