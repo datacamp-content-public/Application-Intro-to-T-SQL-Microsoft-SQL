@@ -279,6 +279,28 @@ key: "6548e480d4"
 ```
 
 `@part1`
+Return  NULL values:
+```SQL
+SELECT columnA, columnB
+FROM table 
+WHERE amount IS NULL
+```
+Return non NULL values
+```SQL
+SELECT columnA, columnB
+FROM table 
+WHERE amount IS NOT NULL
+```
+Replace NULL
+```SQL
+SELECT ISNULL(columnA,0)
+FROM table;
+```
+
+
+`@part2`
+- NULL indicates there is no value for that record. This may be valid, or it can help identify data quality issues
+
 - return NULL values using 
 IS NULL
 
@@ -289,31 +311,6 @@ IS NOT NULL
 ISNULL(column_name, replacement_value)
 
 - Note the difference between IS NULL and ISNULL()
-
-
-`@part2`
-```SQL
-
-SELECT columnA, columnB
-FROM table 
-
--- return NULLs
-
-WHERE amount IS NULL
-
--- return non NULLS
-
-WHERE amount IS NOT NULL
-
--- replace NULLs
-
-SELECT ISNULL(columnA,0)
-FROM table
-WHERE --other conditions
-ORDER BY column B DESC;
-
-
-```
 
 
 `@script`
