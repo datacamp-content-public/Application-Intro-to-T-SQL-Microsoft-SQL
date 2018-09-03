@@ -72,7 +72,7 @@ SELECT TOP (10) customer_id,amount
 ```
 {{1}}
 
-![](https://assets.datacamp.com/production/repositories/3466/datasets/d85b48c99dc09aaec459f78124ee019f8463b313/01 Order-by-output.PNG) {{3}}
+![](https://assets.datacamp.com/production/repositories/3466/datasets/d85b48c99dc09aaec459f78124ee019f8463b313/01 Order-by-output.PNG) {{2}}
 
 
 `@part2`
@@ -83,17 +83,17 @@ SELECT TOP (10) customer_id,amount
 - By default, results are returned in ascending order (low - to high).  If ordering by 2 or more columns, they are sorted by the first column, then each remaining column in turn  
 {{2}}
 
-- ORDER BY should always appear on the  last line of the query {{4}}
+- ORDER BY should always appear on the  last line of the query {{3}}
 
-- TIP - We can order by columns that don't appear in the select list {{5}}
+- TIP - We can order by columns that don't appear in the select list {{4}}
 
 
 `@script`
 To order our results, we simply list the columns we want to sort by. 
 
-If we list more than one column, the results are sorted in the order they are listed, from left to right. Here, we sort first by amount, then by customer ID. 
+Here, we sort first by amount, then by customer ID. 
 
-Notice rows 3 and 4, and 8-10, have the same values in the amount column, so the ID column determines their final row order
+Notice rows 3 and 4, and 8-10, have the same values in the amount column, so the ID column determines their final row position
 
 We can also order by a column that is not used in the SELECT statement
 
@@ -176,7 +176,9 @@ SELECT product_id, product
 FROM Product
 ORDER BY product;
 ```
-![](https://assets.datacamp.com/production/repositories/3466/datasets/87d97067b4ce46c95a8b94be86a7c67b7a96c12e/01-string-ascending.PNG)
+{{1}}
+
+![](https://assets.datacamp.com/production/repositories/3466/datasets/87d97067b4ce46c95a8b94be86a7c67b7a96c12e/01-string-ascending.PNG) {{1}}
 
 
 `@part2`
@@ -185,13 +187,17 @@ SELECT product_id, product
 FROM Product
 ORDER BY product DESC;
 ```
+{{2}}
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/1e3830266d5a038b70112a8aab7c6b03b198bd5c/01-string-descending.PNG)
+{{2}}
 
 
 `@script`
-Ordering works with string or text fields as well. So here, we see product sorted from A-Z on the left,and from Z-A  on the right,due to the DESC keyword. 
+Ordering works with string or text fields as well. 
+So here, we see product sorted from A-Z on the left,and from Z-A  on the right, due to use of the DESC, or descending, keyword. 
+
 By default, SQL Server is case insensitive - so capitals and lower case letters are treated the same. 
-BUT - this can be changed.
+This also applies to referencing table and column names, and also keywords such as SELECT and FROM
 
 
 ---
@@ -274,7 +280,7 @@ WHERE price  != 10 --  alternative NOT EQUAL notation;
 
 
 `@script`
-![](image-url)There are a couple of ways to test for non equality. 
+There are a couple of ways to test for non equality. 
 
 The first is to use the left and right arrows together, as shown in the top example. This is the most commonly used method in T-SQL.
 
@@ -320,7 +326,7 @@ WHERE quantity NOT BETWEEN 1 AND 3;
 
 
 `@script`
-Use BETWEEN to return a range of values. Your results will include the values you specify.  The first query includes 1 and 3 
+You can use BETWEEN to return values in a range. Your results will include the values you specify.  The first query includes 1 and 3 
 You can negate this by preceding BETWEEN with the 'NOT' keyword
 
 
