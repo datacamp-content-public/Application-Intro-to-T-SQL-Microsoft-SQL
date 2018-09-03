@@ -317,7 +317,7 @@ FROM table;
 
 
 `@script`
-NULLs occur in tables when there is no value for a particular field, for one or more records. 
+NULLs occur when there is no value for a particular field, for one or more records. 
 
 Some columns are not allowed to have missing values -  they are non NULLable. 
 
@@ -379,17 +379,19 @@ key: "f8eb4b724c"
 
 SELECT amount,
 invoice_no,
-ISNULL(invoice_no,0) AS replace_null
+ISNULL(invoice_no,0) AS null_replacement
 FROM expenses
 ORDER BY amount DESC;
-
 ```
+{{1}}
 
-![](https://assets.datacamp.com/production/repositories/3466/datasets/066be7e1dcffa51931de01746842603502167cd6/replaceNULL.png)
+![](https://assets.datacamp.com/production/repositories/3466/datasets/2c5ea4e2c757f2be87726cc0389da20e4d5a7a03/replaceNULL.png)
+{{2}}
 
 
 `@script`
-
+Here we use ISNULL to replace missing invoice numbers with 0. We also select the original column for comparison. 
+Notice the use of the AS keyword, which allows us to name our new column 'null_replacement'
 
 
 ---
@@ -401,5 +403,5 @@ key: "3e4c2c69b7"
 ```
 
 `@script`
-
+OK, let's practice our new skills!
 
