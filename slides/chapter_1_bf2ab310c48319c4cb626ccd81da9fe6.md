@@ -49,7 +49,7 @@ key: "83a55eeb90"
 
 
 `@script`
-Our data is stored in tables, comprising of columns and rows, like a spreadsheet. 
+Data is stored in tables, comprising of columns and rows, like a spreadsheet. 
 
 This gives a sense of order.
 
@@ -142,7 +142,7 @@ SELECT TOP (10) customer_id,amount
 
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/e32f5b675f913c81a0f32acf07209d5b18220600/01 Order-by-output-multiple-ascending.PNG)
 
-Both in ascending order
+Sort both columns in ascending order
 
 
 `@part2`
@@ -153,11 +153,12 @@ SELECT TOP (10) customer_id,amount
 ```
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/cb3336de57323b36bec72bd37f599e820deb98fe/01 Order-by-output-multiple-desc.PNG)
 
-Amount in descending order
+Sort by amount in descending order
 
 
 `@script`
-We can sort by multiple columns, in the same direction, or in different combinations of ascending and descending order.
+We can sort by multiple columns, in different combinations of ascending and descending order.
+This can dramatically vary our results
 
 
 ---
@@ -187,12 +188,13 @@ ORDER BY product DESC;
 
 
 `@script`
-Ordering works with string or text fields as well. So here, we see product sorted from A-Z on the left, and, because we specify DESC in the right hand query, we see the product column ordered from Z-A. 
-As before, we can order multiple string columns, in any combination of ascending and descending order.
+Ordering works with string or text fields as well. So here, we see product sorted from A-Z on the left,and from Z-A  on the right,due to the DESC keyword. 
+By default, SQL Server is case insensitive - so capitals and lower case letters are treated the same. 
+BUT - this can be changed.
 
 
 ---
-## WHERE clause operators
+## The WHERE clause 
 
 ```yaml
 type: "FullSlide"
@@ -203,21 +205,28 @@ key: "cb95ad24ba"
 ```SQL
 SELECT product, price
 FROM sales 
-WHERE price -- apply filter
-ORDER BY ; 
+WHERE -- apply filter
+```
 
--- WHERE price > 10 -- greater than 10
+```SQL
+WHERE price > 10 -- greater than 10
+```
 
--- WHERE price  < 10 -- less than 10
+```SQL
+WHERE price  < 10 -- less than 10
+```
 
--- WHERE price >= 10 -- greater than or equal to 10
+```SQL
+WHERE price >= 10 -- greater than or equal to 10
+```
 
--- WHERE price  <= 20 -- less than or equal to 20
+```SQL
+WHERE price  <= 20 -- less than or equal to 20
+```
 
--- filtering string columns
-
+Filtering text -Use single quotes 
+```SQL
 -- WHERE product = 'peripherals'
-
 ```
 
 
@@ -230,7 +239,7 @@ As with order by - we can filter using a column that is not in the main SELECT s
 
 
 ---
-## NON EQUALITY
+## WHERE NOT EQUAL
 
 ```yaml
 type: "FullSlide"
