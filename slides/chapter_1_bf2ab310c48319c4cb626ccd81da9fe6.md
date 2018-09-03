@@ -153,7 +153,7 @@ We can sort by multiple columns, in the same direction, or in different combinat
 
 
 ---
-## Ordering String columns
+## Ordering text columns
 
 ```yaml
 type: "TwoColumns"
@@ -179,7 +179,7 @@ ORDER BY product DESC;
 
 
 `@script`
-Ordering works with string fields as well. So here, we see product sorted from A-Z on the left, and, because we specify DESC in the right hand query, we see the product column ordered from Z-A. 
+Ordering works with string or text fields as well. So here, we see product sorted from A-Z on the left, and, because we specify DESC in the right hand query, we see the product column ordered from Z-A. 
 As before, we can order multiple string columns, in any combination of ascending and descending order.
 
 
