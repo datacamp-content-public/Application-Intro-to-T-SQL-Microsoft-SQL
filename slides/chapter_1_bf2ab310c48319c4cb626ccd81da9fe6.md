@@ -189,7 +189,7 @@ As before, we can order multiple string columns, in any combination of ascending
 
 
 ---
-## WHERE clause operators 
+## WHERE clause operators
 
 ```yaml
 type: "FullSlide"
@@ -310,11 +310,13 @@ ORDER BY column B DESC;
 
 
 `@script`
-A missing value is not necessarily a zero value, and we may need to be aware of the 'missingness' of the record - NULLS help highlight gaps in our data
+A missing value is not necessarily a zero value, and we may need to be aware of the 'missingness' of the record - NULLS help highlight gaps in our data.
+
+So it is very useful to know how to retrieve NULLS, using IS NULL, how to filter them out, using IS NOT NULL, and , if required , how to replace them, using the ISNULL function.
 
 
 ---
-## Final Slide
+## Let's Practice
 
 ```yaml
 type: "FinalSlide"
