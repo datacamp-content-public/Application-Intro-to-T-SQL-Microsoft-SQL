@@ -279,38 +279,41 @@ key: "6548e480d4"
 ```
 
 `@part1`
-Return  NULL values:
+Return  NULL values:  {{2}}
 ```SQL
 SELECT columnA, columnB
 FROM table 
 WHERE amount IS NULL
 ```
-Return non NULL values
+{{2}}
+Return non NULL values {{3}}
 ```SQL
 SELECT columnA, columnB
 FROM table 
 WHERE amount IS NOT NULL
 ```
-Replace NULL
+{{3}}
+Replace NULL {{4}}
 ```SQL
 SELECT ISNULL(columnA,0)
 FROM table;
 ```
+{{4}}
 
 
 `@part2`
 - NULL indicates there is no value for that record. This may be valid, or it can help identify data quality issues
+{{1}}
 
-- return NULL values using 
-IS NULL
+- return NULL values using IS NULL 
+{{2}}
 
-- filter out NULLs using 
-IS NOT NULL
+- filter out NULLs using IS NOT NULL 
+{{3}}
 
-- replace NULLS using
-ISNULL(column_name, replacement_value)
+- replace NULLS using ISNULL(column_name, replacement_value) {{4}}
 
-- Note the difference between IS NULL and ISNULL()
+- Note the difference between IS NULL and ISNULL(){{7}}
 
 
 `@script`
@@ -341,7 +344,9 @@ FROM expenses
 WHERE invoice_no IS NULL
 ORDER BY amount DESC;
 ```
+{{1}}
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/4d6c648472dd7df5912a917af8f87f0d49aac88e/top5null.png)
+{{2}}
 
 
 `@part2`
@@ -351,8 +356,10 @@ FROM expenses
 WHERE invoice_no IS NOT NULL
 ORDER BY amount DESC,
 ```
+{{3}}
 
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/76d4a7ade3b21663e075ea18266e1159e66ba1f6/top5isnotnull.png)
+{{4}}
 
 
 `@script`
