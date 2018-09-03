@@ -239,7 +239,7 @@ As with order by - we can filter using a column that is not in the main SELECT s
 
 
 ---
-## WHERE NOT EQUAL
+## NOT EQUAL
 
 ```yaml
 type: "FullSlide"
@@ -248,35 +248,64 @@ key: "c4379f92c3"
 
 `@part1`
 ```SQL
-
 SELECT product, price
 FROM sales 
 WHERE price  <> 10 -- NOT EQUAL to 10;
+```
 
-
+```SQL
 SELECT product, price
 FROM sales  
 WHERE price  != 10 --  alternative NOT EQUAL notation;
-
-SELECT product, price
-FROM sales  
-WHERE price !< 10; -- not less than 10 (same as >= 10)
-
-SELECT product, price
-FROM sales  
-WHERE price !> 10; -- not greater than 10 (same as <= 10)
-
 ```
 
 
 `@script`
-There are a couple of ways to test for non equality. 
+![](image-url)There are a couple of ways to test for non equality. 
 
-The first is to use the left and right arrows together, as shown in the top example. This is the most commonly used method in T-SQL
+The first is to use the left and right arrows together, as shown in the top example. This is the most commonly used method in T-SQL.
 
-Using the exclamation and equals sign also works, as per the second example.
+Using the exclamation and equals sign also works.
 
-You can also use the exclamation sign to test for  NOT LESS THAN and NOT GREATER THAN conditions.
+
+---
+## BETWEEN
+
+```yaml
+type: "TwoColumns"
+key: "f3397b46c1"
+```
+
+`@part1`
+Use 'BETWEEN' & 
+'AND' to specify a range of values
+
+```SQL
+SELECT TOP (5) price,quantity
+FROM sales  
+WHERE quantity BETWEEN 1 AND 3;
+```
+
+We can negate the BETWEEN clause by preceding with 'NOT' :
+
+
+
+```SQL
+SELECT TOP (5) price,quantity
+FROM sales  
+WHERE quantity NOT BETWEEN 1 AND 3;
+```
+
+
+`@part2`
+![](https://assets.datacamp.com/production/repositories/3466/datasets/9767d9443aab266e7441b6a171cfe62358d60c75/01 BETWEEN.png)
+
+![](https://assets.datacamp.com/production/repositories/3466/datasets/9767d9443aab266e7441b6a171cfe62358d60c75/01 BETWEEN.png)
+
+
+`@script`
+Use BETWEEN to return a range of values. Your results will include the values you specify. 
+You can negate this with NOT BETWEEN
 
 
 ---
