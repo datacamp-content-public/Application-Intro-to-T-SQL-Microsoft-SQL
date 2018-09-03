@@ -314,7 +314,7 @@ WHERE quantity NOT BETWEEN 1 AND 3;
 
 
 `@script`
-Use BETWEEN to return a range of values. Your results will include the values you specify. 
+Use BETWEEN to return a range of values. Your results will include the values you specify.  The first query includes 1 and 3 
 You can negate this with NOT BETWEEN
 
 
@@ -451,5 +451,5 @@ key: "3e4c2c69b7"
 ```
 
 `@script`
-OK, let's practice our new skills!
+OK, we've covered a lot in this lesson. Let's practice our new skills!
 
