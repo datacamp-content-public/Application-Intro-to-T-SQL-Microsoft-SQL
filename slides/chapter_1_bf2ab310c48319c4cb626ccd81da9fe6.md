@@ -17,7 +17,7 @@ title: Instructor
 
 
 `@script`
-We've seen how to limit the number of rows returned using TOP. Now, we'll learn more advanced filtering, and sorting, using the WHERE and ORDER BY clauses.
+We've seen how to limit the number of rows returned using TOP. Now, we'll learn more advanced filtering and sorting,  using the WHERE and ORDER BY clauses.
 
 
 ---
@@ -194,7 +194,7 @@ BUT - this can be changed.
 
 
 ---
-## The WHERE clause 
+## The WHERE clause
 
 ```yaml
 type: "FullSlide"
