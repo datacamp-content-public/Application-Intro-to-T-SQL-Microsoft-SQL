@@ -17,7 +17,7 @@ title: Instructor
 
 
 `@script`
-Simple SELECT statements return all rows in our chosen columns. In this section, we'll learn how to filter, and sort rows, using the ORDER BY and WHERE clauses.
+We've seen how to limit the number of rows returned using TOP. Now, we'll learn more advanced filtering, and sorting, using the WHERE and ORDER BY clauses.
 
 
 ---
@@ -49,15 +49,13 @@ key: "83a55eeb90"
 
 
 `@script`
-Data is stored in tables, comprising of columns and rows, like a spreadsheet. 
+Table data is stored in columns and rows, giving a sense of structure and order.
 
-This gives a sense of order.
+But we should be aware that queries return data that exists within sets, and that sets have no default order.
 
-But,depending on how the data is entered, and how the table is designed, we can't guarantee data will always be returned in a given order.
+We can't guarantee rows will always be returned in the same position every time.
 
-That's because our queries return data that exists in sets. Sets have no default order.
-
-So, if we want results in a specific order, we must use ORDER BY.
+If we want results in a certain order, we must use ORDER BY.
 
 
 ---
@@ -72,30 +70,31 @@ key: "4d357131b9"
 ```SQL
 SELECT TOP (10) customer_id,amount
   FROM [Order]
-  ORDER BY amount ; 
+  ORDER BY amount,customer_id ; 
 ```
 {{1}}
 
-![](https://assets.datacamp.com/production/repositories/3466/datasets/d85b48c99dc09aaec459f78124ee019f8463b313/01 Order-by-output.PNG) {{2}}
+![](https://assets.datacamp.com/production/repositories/3466/datasets/d85b48c99dc09aaec459f78124ee019f8463b313/01 Order-by-output.PNG) {{3}}
 
 
 `@part2`
 - use ORDER BY [column name] to order by the desired column {{1}}
 
-- By default,results are returned in ascending order (low - to high). {{2}}
+- By default,results are returned in ascending order (low - to high) {{2}}
 
-- When we use ORDER BY, it always appears as the last line of the query {{3}}
+- When we use ORDER BY, it always appears as the last line of the query {{4}}
 
-- We can order by columns that don't appear in the select list ( as long as they exist in the table, we can order by them) {{3}}
+- We can order by columns that don't appear in the select list ( as long as they exist in the table, we can order by them) {{5}}
 
 
 `@script`
 To order our results, we simply list the columns we want to sort by. 
-If we choose more than one column, the results are sorted by the first column, then the subsequent columns, in order.
 
-Note that ORDER BY appears below the FROM section of the query.
+If we list more than one column, the results are sorted in the order they are listed, from left to right.
 
-Bear in mnind that we can order by a column, without it appearing in the  body of the SELECT statement
+Notice rows 3 and 4, and 8-10, have the same values in the amount column, so the ID column determines their final row order
+
+We can also order by a column that is not used in the SELECT statement
 
 
 ---
@@ -121,7 +120,8 @@ To return results in descending order, we use 'DESC' at the end of the ORDER BY 
 
 
 `@script`
-Here we use the same query, but adding DESC to the order by command, to specify results should by from highest to lowest
+Here we add DESC to the order by command, to order results from high to low.
+
 This returns the 10 highest order value records from the order table.
 
 
@@ -137,7 +137,7 @@ key: "4c4bd7f7b7"
 ```SQL
 SELECT TOP (10) customer_id,amount
   FROM [Order]
-  ORDER BY amount, customer_id;
+  ORDER BY amount, customer_id ASC;
 ```
 
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/e32f5b675f913c81a0f32acf07209d5b18220600/01 Order-by-output-multiple-ascending.PNG)
