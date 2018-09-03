@@ -33,11 +33,9 @@ key: "83a55eeb90"
 
 - Queries return _sets_, or _subsets_, of the overall data.{{2}}
 
-- Sets  have NO inherent order. {{3}}
+- Sets  have NO inherent order - results may not always be returned in the same way. {{3}}
 
-- Query results may not always be returned in the same order  {{4}}
-
-- If the order of our query is _important_, we need to specify it using **ORDER BY** {{5}}
+- If the order of our query is _important_, we need to specify it using **ORDER BY** {{4}}
 
 
 `@part2`
@@ -78,19 +76,22 @@ SELECT TOP (10) customer_id,amount
 
 
 `@part2`
-- use ORDER BY [column name] to order by the desired column {{1}}
+- use ORDER BY **column name(s)** to order by the desired column (s) 
+{{1}}
 
-- By default,results are returned in ascending order (low - to high) {{2}}
 
-- When we use ORDER BY, it always appears as the last line of the query {{4}}
+- By default, results are returned in ascending order (low - to high).  If ordering by 2 or more columns, they are sorted by the first column, then each remaining column in turn  
+{{2}}
 
-- We can order by columns that don't appear in the select list ( as long as they exist in the table, we can order by them) {{5}}
+- ORDER BY should always appear on the  last line of the query {{4}}
+
+- TIP - We can order by columns that don't appear in the select list {{5}}
 
 
 `@script`
 To order our results, we simply list the columns we want to sort by. 
 
-If we list more than one column, the results are sorted in the order they are listed, from left to right.
+If we list more than one column, the results are sorted in the order they are listed, from left to right. Here, we sort first by amount, then by customer ID. 
 
 Notice rows 3 and 4, and 8-10, have the same values in the amount column, so the ID column determines their final row order
 
@@ -202,38 +203,42 @@ key: "cb95ad24ba"
 ```
 
 `@part1`
-```SQL
 SELECT product, price
+
 FROM sales 
-WHERE -- apply filter
-```
+WHERE (these conditions are true) 
+
+{{1}}
 
 ```SQL
 WHERE price > 10 -- greater than 10
 ```
+{{2}}
 
 ```SQL
 WHERE price  < 10 -- less than 10
 ```
-
+{{3}}
 ```SQL
 WHERE price >= 10 -- greater than or equal to 10
 ```
-
+{{4}}
 ```SQL
 WHERE price  <= 20 -- less than or equal to 20
 ```
-
-Filtering text -Use single quotes 
+{{5}}
+Filtering text -Use single quotes {{6}}
 ```SQL
 -- WHERE product = 'peripherals'
 ```
+{{7}}
 
 
 `@script`
-It's good practice to use filters to ensure we only retrieve the data we need - why return millions of rows if we only need several thousand. 
-We use the WHERE clause, to filter our data so that we only return the rows that meet our desired criteria. 
+We  can use the WHERE clause to filter our data so that we only return the rows that meet our desired criteria. 
+
 The most common types of WHERE clause are shown here. 
+
 Note that when we filter string columns, we use single quotes to specify the desired string value.
 As with order by - we can filter using a column that is not in the main SELECT statement
 
@@ -252,12 +257,14 @@ SELECT product, price
 FROM sales 
 WHERE price  <> 10 -- NOT EQUAL to 10;
 ```
+{{1}}
 
 ```SQL
 SELECT product, price
 FROM sales  
 WHERE price  != 10 --  alternative NOT EQUAL notation;
 ```
+{{2}}
 
 
 `@script`
@@ -265,7 +272,7 @@ WHERE price  != 10 --  alternative NOT EQUAL notation;
 
 The first is to use the left and right arrows together, as shown in the top example. This is the most commonly used method in T-SQL.
 
-Using the exclamation and equals sign also works.
+Using the exclamation mark in conjunction with the equals sign also works.
 
 
 ---
@@ -277,8 +284,9 @@ key: "f3397b46c1"
 ```
 
 `@part1`
-Use 'BETWEEN' & 
-'AND' to specify a range of values
+Use the'BETWEEN' & 
+'AND' keywords to specify a range of values. 
+
 
 ```SQL
 SELECT TOP (5) price,quantity
@@ -301,7 +309,7 @@ WHERE quantity NOT BETWEEN 1 AND 3;
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/9767d9443aab266e7441b6a171cfe62358d60c75/01 BETWEEN.png)
 {{2}}
 
-![](https://assets.datacamp.com/production/repositories/3466/datasets/9767d9443aab266e7441b6a171cfe62358d60c75/01 BETWEEN.png)
+![](https://assets.datacamp.com/production/repositories/3466/datasets/7bad6f9d63ae812ba857b35c536b20aaf3cb8fbb/01 NOT BETWEEN.png)
 {{5}}
 
 
