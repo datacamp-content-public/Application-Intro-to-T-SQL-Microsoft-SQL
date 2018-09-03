@@ -264,8 +264,8 @@ As with order by - we can filter using a column that is not in the main SELECT s
 ## NOT EQUAL
 
 ```yaml
-type: "FullSlide"
-key: "c4379f92c3"
+type: "TwoRows"
+key: "a1823805fa"
 ```
 
 `@part1`
@@ -276,6 +276,8 @@ WHERE price  <> 10 -- NOT EQUAL to 10;
 ```
 {{1}}
 
+
+`@part2`
 ```SQL
 SELECT product, price
 FROM sales  
