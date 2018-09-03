@@ -89,9 +89,9 @@ SELECT TOP (10) customer_id,amount
 
 
 `@script`
-To order our results, we simply list the columns we want to sort by. 
+To order our results, we simply list the columns we want to sort by after the FROM keyword. 
 
-Here, we sort first by amount, then by customer ID. 
+Here, we sort by amount, then customer ID. 
 
 Notice rows 3 and 4, and 8-10, have the same values in the amount column, so the ID column determines their final row position
 
@@ -121,7 +121,7 @@ To return results in descending order, we use 'DESC' at the end of the ORDER BY 
 
 
 `@script`
-Here we add DESC to the order by command, to order results from high to low.
+Here we add DESC,or descending, keyword, to the order by clause, to order results from high to low.
 
 This returns the 10 highest order value records from the order table.
 
@@ -158,8 +158,7 @@ Sort by amount in descending order
 
 
 `@script`
-We can sort by multiple columns, in different combinations of ascending and descending order.
-This can dramatically vary our results
+We can sort by multiple columns and combinations of order, to arrive at the final output we require
 
 
 ---
@@ -194,7 +193,7 @@ ORDER BY product DESC;
 
 `@script`
 Ordering works with string or text fields as well. 
-So here, we see product sorted from A-Z on the left,and from Z-A  on the right, due to use of the DESC, or descending, keyword. 
+So here, we see product sorted from A-Z on the left,and from Z-A  on the right, due to use of DESC
 
 By default, SQL Server is case insensitive - so capitals and lower case letters are treated the same. 
 This also applies to referencing table and column names, and also keywords such as SELECT and FROM
