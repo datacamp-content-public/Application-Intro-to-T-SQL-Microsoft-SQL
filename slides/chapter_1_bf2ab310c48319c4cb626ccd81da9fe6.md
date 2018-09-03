@@ -17,7 +17,7 @@ title: Instructor
 
 
 `@script`
-Our SELECT statements  currently return all rows in our chosen columns. In this section, we'll learn how to filter these rows, and sort them, using the ORDER BY and WHERE clauses.
+Simple SELECT statements return all rows in our chosen columns. In this section, we'll learn how to filter, and sort rows, using the ORDER BY and WHERE clauses.
 
 
 ---
@@ -49,11 +49,13 @@ key: "83a55eeb90"
 
 
 `@script`
-Our data is stored in tables, which comprise of columns and rows, like a spreadsheet, which gives a sense of order.
+Our data is stored in tables, comprising of columns and rows, like a spreadsheet. 
 
-But,depending on how the data is entered, and how the table is designed, we can't guarantee our SELECT statements will always return data in a given order.
+This gives a sense of order.
 
-That's because we are actually returning data in sets. Sets have no default order.
+But,depending on how the data is entered, and how the table is designed, we can't guarantee data will always be returned in a given order.
+
+That's because our queries return data that exists in sets. Sets have no default order.
 
 So, if we want results in a specific order, we must use ORDER BY.
 
@@ -84,10 +86,12 @@ SELECT TOP (10) customer_id,amount
 
 - When we use ORDER BY, it always appears as the last line of the query {{3}}
 
+- We can order by columns that don't appear in the select list ( as long as they exist in the table, we can order by them) {{3}}
+
 
 `@script`
 To order our results, we simply list the columns we want to sort by. 
-If we choose more than one column to order by, the results are sorted by the first column, then the subsequent columns, in order.
+If we choose more than one column, the results are sorted by the first column, then the subsequent columns, in order.
 
 Note that ORDER BY appears below the FROM section of the query.
 
@@ -254,6 +258,7 @@ WHERE price !> 10; -- not greater than 10 (same as <= 10)
 
 `@script`
 There are a couple of ways to test for non equality. 
+
 The first is to use the left and right arrows together, as shown in the top example. This is the most commonly used method in T-SQL
 
 Using the exclamation and equals sign also works, as per the second example.
