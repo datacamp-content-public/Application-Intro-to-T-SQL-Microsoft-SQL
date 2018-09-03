@@ -253,7 +253,12 @@ WHERE price !> 10; -- not greater than 10 (same as <= 10)
 
 
 `@script`
+There are a couple of ways to test for non equality. 
+The first is to use the left and right arrows together, as shown in the top example. This is the most commonly used method in T-SQL
 
+Using the exclamation and equals sign also works, as per the second example.
+
+You can also use the exclamation sign to test for  NOT LESS THAN and NOT GREATER THAN conditions.
 
 
 ---
@@ -265,8 +270,6 @@ key: "6548e480d4"
 ```
 
 `@part1`
-- NULLs occur in tables when there is no value for a particular field, for a particular record. 
-
 - return NULL values using 
 IS NULL
 
@@ -305,9 +308,75 @@ ORDER BY column B DESC;
 
 
 `@script`
+NULLs occur in tables when there is no value for a particular field, for one or more records. 
+
+Some columns are not allowed to have missing values -  they are non NULLable. 
+
+However, it may be perfectly valid for other columns to be NULL. 
 A missing value is not necessarily a zero value, and we may need to be aware of the 'missingness' of the record - NULLS help highlight gaps in our data.
 
-So it is very useful to know how to retrieve NULLS, using IS NULL, how to filter them out, using IS NOT NULL, and , if required , how to replace them, using the ISNULL function.
+So, it's very useful to know how to retrieve NULLS, using IS NULL, how to filter them out, using IS NOT NULL, and , if required , how to replace them, using the ISNULL function.
+
+ISNULL requires a replacement value to be specified.
+
+
+---
+## NULL examples
+
+```yaml
+type: "TwoColumns"
+key: "c13ee81a57"
+```
+
+`@part1`
+```SQL
+SELECT TOP (5) amount,invoice_no
+FROM expenses
+WHERE invoice_no IS NULL
+ORDER BY amount DESC;
+```
+![](https://assets.datacamp.com/production/repositories/3466/datasets/4d6c648472dd7df5912a917af8f87f0d49aac88e/top5null.png)
+
+
+`@part2`
+```SQL
+SELECT TOP (5) amount,invoice_no
+FROM expenses
+WHERE invoice_no IS NOT NULL
+ORDER BY amount DESC,
+```
+
+![](https://assets.datacamp.com/production/repositories/3466/datasets/76d4a7ade3b21663e075ea18266e1159e66ba1f6/top5isnotnull.png)
+
+
+`@script`
+
+
+
+---
+## REPLACING NULL VALUES
+
+```yaml
+type: "FullSlide"
+key: "f8eb4b724c"
+```
+
+`@part1`
+```SQL
+
+SELECT amount,
+invoice_no,
+ISNULL(invoice_no,0) AS replace_null
+FROM expenses
+ORDER BY amount DESC;
+
+```
+
+![](https://assets.datacamp.com/production/repositories/3466/datasets/066be7e1dcffa51931de01746842603502167cd6/replaceNULL.png)
+
+
+`@script`
+
 
 
 ---
