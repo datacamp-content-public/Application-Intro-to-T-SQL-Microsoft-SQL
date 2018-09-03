@@ -47,13 +47,13 @@ key: "83a55eeb90"
 
 
 `@script`
-Table data is stored in columns and rows, giving a sense of structure and order.
+Tables comprise of rows and columns, and query results can also be displayed this way.
 
-But we should be aware that queries return data that exists within sets, and that sets have no default order.
+But we should bear in mind that queries return data that exist within SETS, and that sets have no default order.
 
-We can't guarantee rows will always be returned in the same position every time.
+This means we can't guarantee rows will be returned in the same position every time.
 
-If we want results in a certain order, we must use ORDER BY.
+If we need results in a certain order, we must use ORDER BY.
 
 
 ---
