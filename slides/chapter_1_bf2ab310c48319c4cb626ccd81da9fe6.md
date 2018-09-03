@@ -83,9 +83,9 @@ SELECT TOP (10) customer_id,amount
 - By default, results are returned in ascending order (low - to high).  If ordering by 2 or more columns, they are sorted by the first column, then each remaining column in turn  
 {{2}}
 
-- ORDER BY should always appear on the  last line of the query {{3}}
+- We can order by columns that don't appear in the select list {{3}}
 
-- TIP - We can order by columns that don't appear in the select list {{4}}
+- ORDER BY should always appear on the  last line of the query {{3}}
 
 
 `@script`
@@ -213,8 +213,6 @@ SELECT product, price
 FROM sales 
 WHERE (these conditions are true) 
 
-{{1}}
-
 ```SQL
 WHERE price > 10 -- greater than 10
 ```
@@ -332,7 +330,7 @@ WHERE quantity NOT BETWEEN 1 AND 3;
 
 
 `@script`
-You can use BETWEEN to return values in a range. Your results will include the values you specify.  The first query includes 1 and 3 
+You can use BETWEEN to return values in a range. Your results will include the values you specify.  The quantity column includes 1 and 3 
 You can negate this by preceding BETWEEN with the 'NOT' keyword
 
 
@@ -383,7 +381,7 @@ FROM table;
 `@script`
 NULLs occur when there is no value for a particular field, for one or more records. 
 
-Some columns are not allowed to have missing values -  they are non NULLable. 
+Some columns are not allowed to have missing values.
 
 However, it may be perfectly valid for other columns to contain NULLs. 
 
