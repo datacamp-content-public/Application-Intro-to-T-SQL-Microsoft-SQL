@@ -143,17 +143,13 @@ SELECT TOP (10) customer_id,amount
 ```SQL
 SELECT TOP (10) customer_id,amount
   FROM [Order]
-  ORDER BY amount, customer_id DESC;
+  ORDER BY amount ASC, customer_id DESC;
 ```
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/32e4741999b5c10db4267ccbf83d44eca7cb20e6/01 Order-by-output-multiple-desc.PNG)
 
 
 `@script`
-On the left, records are first sorted by order value, then by ID. 
-
-Records 8-10 have the same order value, so its the id column, this acts as a tie breaker and determines the final order.
-
-On the right, records 8-10 have the same order value, but the id column is now sorted in descending order.
+We can sort by multiple columns, in the same direction, or in different combinations of ascending and descending order.
 
 
 ---
