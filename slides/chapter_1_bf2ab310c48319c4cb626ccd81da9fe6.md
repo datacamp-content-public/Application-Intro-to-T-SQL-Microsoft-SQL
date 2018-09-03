@@ -243,14 +243,19 @@ Filtering text -Use single quotes {{6}}
 `@script`
 We use the WHERE clause to ensure we only return rows that meet our desired criteria.
 
-Here we filter by >,
- <,
- >=, 
-or <= to our desired values. 
+Here we filter by  greater than,
 
-As well as numeric values, we can also filter on strings or text.  
 
-When we filter string columns, we use single quotes to specify the desired string value.
+ less than,
+
+
+greater or equal to, 
+
+
+or  less than or equal  to our desired values. 
+
+We can also filter strings or text values.  
+To do this, we use single quotes
 
 As with order by - we can filter using a column that is not in the main SELECT statement
 
@@ -448,7 +453,8 @@ ORDER BY amount DESC;
 
 
 `@script`
-Here we use ISNULL to replace missing invoice numbers with 0. We also select the original column for comparison. 
+Here we use ISNULL to replace missing invoice numbers with 0. We also select the original column for comparison – our NULLS become zeros
+ 
 Notice the use of the AS keyword, which allows us to name our new column 'null_replacement'
 
 
