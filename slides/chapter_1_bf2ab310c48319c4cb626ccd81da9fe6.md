@@ -49,11 +49,13 @@ key: "83a55eeb90"
 
 
 `@script`
-Our data is stored in tables, which comprise of columns and rows.
+Our data is stored in tables, which comprise of columns and rows, like a spreadsheet, which gives a sense of order.
 
 But,depending on how the data is entered, and how the table is designed, we can't guarantee our SELECT statements will always return data in a given order.
 
-If we have a desired order, we must specify it, using ORDER BY.
+That's because we are actually returning data in sets. Sets have no default order.
+
+So, if we want results in a specific order, we must use ORDER BY.
 
 
 ---
@@ -84,15 +86,12 @@ SELECT TOP (10) customer_id,amount
 
 
 `@script`
-Here we select 2 columns  - customer ID and amount, and order by the the amount column. 
- 
-By default, when we use ORDER BY, the results are ordered lowest to highest
-
-The results show the 10 records with the lowest order amount.
+To order our results, we simply list the columns we want to sort by. 
+If we choose more than one column to order by, the results are sorted by the first column, then the subsequent columns, in order.
 
 Note that ORDER BY appears below the FROM section of the query.
 
-Finally, remember that we can order by a column, without it appearing in the SELECT statement
+Bear in mnind that we can order by a column, without it appearing in the  body of the SELECT statement
 
 
 ---
