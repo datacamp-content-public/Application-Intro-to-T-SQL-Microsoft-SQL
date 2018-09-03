@@ -235,11 +235,17 @@ Filtering text -Use single quotes {{6}}
 
 
 `@script`
-We  can use the WHERE clause to filter our data so that we only return the rows that meet our desired criteria. 
+We use the WHERE clause to ensure we only return rows that meet our desired criteria.
 
-The most common types of WHERE clause are shown here. 
+Here we filter by >,
+ <,
+ >=, 
+or <= to our desired values. 
 
-Note that when we filter string columns, we use single quotes to specify the desired string value.
+As well as numeric values, we can also filter on strings or text.  
+
+When we filter string columns, we use single quotes to specify the desired string value.
+
 As with order by - we can filter using a column that is not in the main SELECT statement
 
 
@@ -284,7 +290,7 @@ key: "f3397b46c1"
 ```
 
 `@part1`
-Use the'BETWEEN' & 
+Use the 'BETWEEN' & 
 'AND' keywords to specify a range of values. 
 
 
@@ -315,7 +321,7 @@ WHERE quantity NOT BETWEEN 1 AND 3;
 
 `@script`
 Use BETWEEN to return a range of values. Your results will include the values you specify.  The first query includes 1 and 3 
-You can negate this with NOT BETWEEN
+You can negate this by preceding BETWEEN with the 'NOT' keyword
 
 
 ---
@@ -361,20 +367,15 @@ FROM table;
 
 - replace NULLS using ISNULL(column_name, replacement_value) {{4}}
 
-- Note the difference between IS NULL and ISNULL(){{7}}
-
 
 `@script`
 NULLs occur when there is no value for a particular field, for one or more records. 
 
 Some columns are not allowed to have missing values -  they are non NULLable. 
 
-However, it may be perfectly valid for other columns to be NULL. 
+However, it may be perfectly valid for other columns to contain NULLs. 
+
 A missing value is not necessarily a zero value, and we may need to be aware of the 'missingness' of the record - NULLS help highlight gaps in our data.
-
-So, it's very useful to know how to retrieve NULLS, using IS NULL, how to filter them out, using IS NOT NULL, and , if required , how to replace them, using the ISNULL function.
-
-ISNULL requires a replacement value to be specified.
 
 
 ---
@@ -411,7 +412,10 @@ ORDER BY amount DESC,
 
 
 `@script`
+It's very useful to know how to retrieve NULLS, using IS NULL and how to filter them out, using IS NOT NULL.
 
+You can replace NULLs, if required, using the ISNULL function.
+Let's take a look at that now
 
 
 ---
