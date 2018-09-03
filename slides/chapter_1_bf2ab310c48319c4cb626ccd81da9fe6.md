@@ -140,16 +140,20 @@ SELECT TOP (10) customer_id,amount
   ORDER BY amount, customer_id;
 ```
 
-![](https://assets.datacamp.com/production/repositories/3466/datasets/8ca0fa5bf501073e0993c628cd36fda96ba12559/01 Order-by-output-multiple-ascending.PNG)
+![](https://assets.datacamp.com/production/repositories/3466/datasets/e32f5b675f913c81a0f32acf07209d5b18220600/01 Order-by-output-multiple-ascending.PNG)
+
+Both in ascending order
 
 
 `@part2`
 ```SQL
 SELECT TOP (10) customer_id,amount
   FROM [Order]
-  ORDER BY amount ASC, customer_id DESC;
+  ORDER BY amount DESC, customer_id;
 ```
-![](https://assets.datacamp.com/production/repositories/3466/datasets/32e4741999b5c10db4267ccbf83d44eca7cb20e6/01 Order-by-output-multiple-desc.PNG)
+![](https://assets.datacamp.com/production/repositories/3466/datasets/cb3336de57323b36bec72bd37f599e820deb98fe/01 Order-by-output-multiple-desc.PNG)
+
+Amount in descending order
 
 
 `@script`
