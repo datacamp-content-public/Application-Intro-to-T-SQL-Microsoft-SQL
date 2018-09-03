@@ -285,22 +285,24 @@ SELECT TOP (5) price,quantity
 FROM sales  
 WHERE quantity BETWEEN 1 AND 3;
 ```
+{{1}}
 
-We can negate the BETWEEN clause by preceding with 'NOT' :
-
-
+We can negate the BETWEEN clause by preceding with 'NOT' : {{3}}
 
 ```SQL
 SELECT TOP (5) price,quantity
 FROM sales  
 WHERE quantity NOT BETWEEN 1 AND 3;
 ```
+{{4}}
 
 
 `@part2`
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/9767d9443aab266e7441b6a171cfe62358d60c75/01 BETWEEN.png)
+{{2}}
 
 ![](https://assets.datacamp.com/production/repositories/3466/datasets/9767d9443aab266e7441b6a171cfe62358d60c75/01 BETWEEN.png)
+{{5}}
 
 
 `@script`
