@@ -177,7 +177,7 @@ ORDER BY product;
 ```
 {{1}}
 
-![](https://assets.datacamp.com/production/repositories/3466/datasets/87d97067b4ce46c95a8b94be86a7c67b7a96c12e/01-string-ascending.PNG) {{1}}
+![](https://assets.datacamp.com/production/repositories/3466/datasets/414151d1e92cfe7406fadad359893f271144ad56/01-string-ascending.PNG) {{1}}
 
 
 `@part2`
@@ -187,7 +187,7 @@ FROM Product
 ORDER BY product DESC;
 ```
 {{2}}
-![](https://assets.datacamp.com/production/repositories/3466/datasets/1e3830266d5a038b70112a8aab7c6b03b198bd5c/01-string-descending.PNG)
+![](https://assets.datacamp.com/production/repositories/3466/datasets/33b6b33bfad44c14fb8f03e0214bf83c91a3c26b/01-string-descending.PNG)
 {{2}}
 
 
