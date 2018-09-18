@@ -6,9 +6,9 @@ description: 'This is a template chapter.'
 ## Intro to T-SQL / Microsoft SQL
 
 ```yaml
-type: VideoExercise 
-xp: 50 
-key: 0851e37bc2   
+type: VideoExercise
+key: 0851e37bc2
+xp: 50
 ```
 
 `@projector_key`
